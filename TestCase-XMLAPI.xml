@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="fbc4f9ad-123b-4fcd-a5b7-2a7ef550cea0" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TestCase 2" searchProperties="true" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:testStep type="request" name="managecustomerprefrences" id="583832cb-9da2-4dc1-a181-41b6f5066f34"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>ManageCustomerPreferencesBinding</con:interface><con:operation>getCustomerPreferences</con:operation><con:request name="managecustomerprefrences" id="47b9489c-4a34-4475-82b8-f4ceb9e6a2aa"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://localhost:4444/services/ManageCustomerPreferences_1_0</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:man="http://soa.o2.co.uk/managecustomerpreferencesdata_1">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <man:getCustomerPreferences>\r
+         <man:customerReference>\r
+            <man:referenceName>?</man:referenceName>\r
+            <man:referenceValue>?</man:referenceValue>\r
+         </man:customerReference>\r
+      </man:getCustomerPreferences>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="9bb16e8b-59ab-4cd4-82eb-a6b4415c470a"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="getMsisdn" id="bc3efb0a-bcda-4742-9949-a20addb7d58e"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>ManageMSISDNBinding</con:interface><con:operation>getMSISDN_1</con:operation><con:request name="getMsisdn" id="85d738aa-998c-4752-afc3-1e0de4e24124"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:4444/services/ManageMSISDN_1_0</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:man="http://soa.o2.co.uk/managemsisdndata_1">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <man:getMSISDN_1>\r
+         <man:imsi>?</man:imsi>\r
+      </man:getMSISDN_1>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="0308019e-1bc9-4b8e-b7a8-7a45d6aa4c96"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="getMessage" id="a3753e99-af0f-4b73-8006-9adfe5d32d30"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>ManageVoicemailSoapBinding</con:interface><con:operation>getMessage_1</con:operation><con:request name="getMessage" id="d9a70bc7-5a52-4d59-a999-9ced5edd917e"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:4444/services/ManageVoicemail_1_0</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:man="http://soa.o2.co.uk/managevoicemaildata_1">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <man:getMessage_1>\r
+         <man:msisdn>?</man:msisdn>\r
+         <man:folderName>?</man:folderName>\r
+         <man:messageId>?</man:messageId>\r
+      </man:getMessage_1>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="c6111ddf-09a3-4ca3-9402-6e35e17afbd3"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="getcurrentandpendingrewards" id="cc9cdc58-a922-44d3-8848-91079f3c3f45"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>ManageRewardsBinding</con:interface><con:operation>getCurrentAndPreviousRewards</con:operation><con:request name="getcurrentandpendingrewards" id="0548659a-d8f3-4ca0-ad48-708025df9658"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:4444/services/ManageRewards_2_0</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:man="http://soa.o2.co.uk/managerewardsdata_2" xmlns:cor="http://soa.o2.co.uk/coredata_1">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <man:getCurrentAndPreviousRewards>\r
+         <man:subscriberID>\r
+            <!--You have a CHOICE of the next 3 items at this level-->\r
+            <cor:portalID>?</cor:portalID>\r
+            <cor:msisdn>?</cor:msisdn>\r
+            <cor:accountDetail>\r
+               <cor:billingAccountType>?</cor:billingAccountType>\r
+               <cor:accountNumber>?</cor:accountNumber>\r
+               <cor:msisdn>?</cor:msisdn>\r
+            </cor:accountDetail>\r
+         </man:subscriberID>\r
+      </man:getCurrentAndPreviousRewards>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="d861aea6-8a4b-4885-8338-6ee201dd764b"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="publishEvent" id="5265fb43-5c67-4919-a41d-ef405737c280"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>ManageEventNotificationBinding</con:interface><con:operation>publishEvent</con:operation><con:request name="publishEvent" id="af466001-aa20-4bcc-a33b-5f5d07e3d18a"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:4444/services/ManageEventNotification_1_0</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:man="http://soa.o2.co.uk/manageeventnotificationdata_1" xmlns:cor="http://soa.o2.co.uk/coredata_1">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <man:publishEvent>\r
+         <man:customerId>\r
+            <!--You have a CHOICE of the next 3 items at this level-->\r
+            <cor:portalID>?</cor:portalID>\r
+            <cor:msisdn>?</cor:msisdn>\r
+            <cor:accountDetail>\r
+               <cor:billingAccountType>?</cor:billingAccountType>\r
+               <cor:accountNumber>?</cor:accountNumber>\r
+               <cor:msisdn>?</cor:msisdn>\r
+            </cor:accountDetail>\r
+         </man:customerId>\r
+         <man:serviceName>?</man:serviceName>\r
+         <man:eventType>?</man:eventType>\r
+         <man:effectiveDate>?</man:effectiveDate>\r
+         <man:serviceCode>?</man:serviceCode>\r
+      </man:publishEvent>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="7d69060b-4d20-4773-ab0b-ba8ba7b35547"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="updateDigitalSubscription" id="08c0f25e-93b1-42c3-b425-785ce934bd20"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>ManageDigitalSubscriptionBinding</con:interface><con:operation>updateDigitalSubscription_1</con:operation><con:request name="updateDigitalSubscription" id="75e6abc7-bfde-41dd-af59-27c782b6b1fc"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:4444/services/ManageDigitalSubscription_1_0</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:man="http://soa.o2.co.uk/managedigitalsubscriptiondata_1">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <man:updateDigitalSubscription_1>\r
+         <man:updateSubscriptionDetails>\r
+            <man:digitalProductAccountIdentifier>?</man:digitalProductAccountIdentifier>\r
+            <man:digitalProductSubscriptionIdentifier>?</man:digitalProductSubscriptionIdentifier>\r
+            <man:billingSubscriptionIdentifier>?</man:billingSubscriptionIdentifier>\r
+            <man:updateProductDetails>\r
+               <man:isIncremental>?</man:isIncremental>\r
+               <man:productDetails>\r
+                  <man:serviceCode>?</man:serviceCode>\r
+                  <man:productIdentifier>?</man:productIdentifier>\r
+                  <man:productName>?</man:productName>\r
+                  <man:productStatus>?</man:productStatus>\r
+                  <!--1 or more repetitions:-->\r
+                  <man:additionalInfo>\r
+                     <man:key>?</man:key>\r
+                     <man:value>?</man:value>\r
+                  </man:additionalInfo>\r
+               </man:productDetails>\r
+            </man:updateProductDetails>\r
+            <man:orderNumber>?</man:orderNumber>\r
+         </man:updateSubscriptionDetails>\r
+      </man:updateDigitalSubscription_1>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="dedfdec6-585d-400c-96d1-1e2ec83f0715"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="getOnlineaccountdetails_2" id="534d3619-17f6-4968-941c-cd774852ad8a"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>ManageOnlineRegistrationSoapBinding</con:interface><con:operation>getOnlineAccountDetails_2</con:operation><con:request name="getOnlineaccountdetails_2" id="ed5805c3-2604-4765-a1b0-1723781ce00c"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:4444/services/ManageOnlineRegistration_1_0</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:man="http://soa.o2.co.uk/manageonlineregistrationdata_1">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <man:getOnlineAccountDetails_2>\r
+         <!--You have a CHOICE of the next 3 items at this level-->\r
+         <man:portalId>?</man:portalId>\r
+         <man:custNum>?</man:custNum>\r
+         <man:friendlyUsername>?</man:friendlyUsername>\r
+      </man:getOnlineAccountDetails_2>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="2d17585d-c0b8-40c2-bda3-8349bbbfe738"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="sendIPAddress" id="2dc09fb2-d83d-46de-8d96-fffc9d2747ed"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>PublishBBProvisioningEventBinding</con:interface><con:operation>sendIPAddress_1</con:operation><con:request name="sendIPAddress" id="c0425d9f-32cf-4fbb-bf48-749a2a13911b"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:4444/services/PublishBBProvisioningEvent_1_0</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:pub="http://soa.o2.co.uk/publishbbprovisioningeventdata_1">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <pub:sendIPAddress_1>\r
+         <!--You have a CHOICE of the next 2 items at this level-->\r
+      </pub:sendIPAddress_1>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="e438ac42-2e23-44c6-b2f5-4872559a2bd1"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase>
